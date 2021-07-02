@@ -75,3 +75,176 @@
 // arr[arr.length] = 1;
 // arr[arr.length] = 4;
 // console.log(arr);
+
+// array push demo
+// let fruits = ['Apple', 'Orange'];
+// const ret = fruits.push('Pear');
+// console.log(ret);
+// console.log(fruits);
+
+// array splice demo
+// let arr = ['I', 'study', 'JavaScript', 'right', 'now'];
+// // remove 3 first elements and replace them with another
+// console.log(arr.splice(0, 3, "Let's", 'dance'));
+// console.log(arr); // now ["Let's", "dance", "right", "now"]
+
+// array concat demo
+// let arr = [1, 2];
+// const newArr = arr.concat([3, [4, 5]]);
+// console.log(newArr);
+// console.log(arr);
+
+// วิธี loop element array แบบที่ 1
+// const names = ['Boon', 'Team', 'May'];
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
+
+// วิธี loop element array แบบที่ 2
+// for (let ele of names) {
+//   console.log(ele);
+// }
+
+// Array forEach demo
+// const ret = ['Boon', 'Team', 'May'].forEach((item, index, array) => {
+//   console.log(`${item} is at index ${index} in ${array}`);
+// });
+
+// console.log(ret);
+
+// const log = (item, index, array) => {
+//   console.log(`${item} is at index ${index} in ${array}`);
+// };
+
+// const newLog = () => console.log(`Hello Test}`);
+
+// ['Boon', 'Team', 'May'].forEach(newLog);
+
+// Lab 5.3
+// const animals = ['Dog', 'Cat', 'Rat'];
+// animals.push('Fish');
+// animals.unshift('Horse');
+// animals.push('Giraffe', 'Snake');
+// animals.shift();
+// animals.pop();
+// animals.shift();
+// console.log(animals);
+
+// Lab 5.5
+// const clone = arr => arr.slice();
+
+// // Lab 5.6
+// const a = [1, 5, 7, 11];
+// const b = [2, 3, 6];
+// const c = a.concat(b);
+// console.log(c);
+
+// // Lab 5.7
+// let fish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+// fish.splice(0);
+
+// // Lab 5.8
+// const person = ['John', 'Jay', 'Jim', 'Jame'];
+// person.splice(1, 1, 'Jack', 'Joe');
+
+// // Lab 5.9
+// const sports = ['football', 'volleyball', 'tennis', 'basketball', 'judo'];
+// const subSports = sports.slice(1, 4);
+
+// // Lab 5.10
+// const cars = ['volvo', 'toyota', 'honda', 'ford'];
+// cars.splice(3, 0, 'mazda', 'bmw', 'nissan');
+
+// Lab 5.11
+// const array = [29, 17, 13, 47, 23, 31];
+// let sum = 0;
+// array.forEach(item => (sum += item));
+// console.log(sum);
+
+// // Lab 5.12
+// const names = ['Mike', 'Sid', 'Jack', 'Bill'];
+// names.forEach((item, index) => console.log(`${index + 1}. ${item}`));
+
+// const products = ['Coke', 'Pepsi', 'Coke', 'Mirinda'];
+// const founded = products.find((item, index, array) => {
+//   return item.includes('z');
+// });
+
+// const idx = products.findIndex((item, index, array) => {
+//   return item === 'Coke';
+// });
+
+// const nums = [1, 3, 8, 11, -2];
+// const even = nums.filter(function (item, index, arr) {
+//   if (item % 2 === 0) {
+//     return true;
+//   }
+// });
+
+// Lab 5.14
+// const alphabets = ['a', 'b', 'a', 'c', 'a', 'd'];
+// expexted result: [0, 2, 4]
+
+// const indexes = [];
+// for (let i = 0; i < alphabets.length; i++) {
+//   if (alphabets[i] === 'a') {
+//     indexes.push(i);
+//   }
+// }
+
+// let idx = alphabets.indexOf('a');
+
+// while (idx !== -1) {
+//   indexes.push(idx);
+//   idx = alphabets.indexOf('a', idx + 1);
+// }
+
+// Lab 5.16
+// const nums = [7, 9, -5, -1, 0, 3];
+// const firstNegativeNum = nums.find(item => item < 0);
+
+// // Lab 5.17
+// const inventory = [
+//   { name: 'apples', quantity: 2 },
+//   { name: 'bananas', quantity: 0 },
+//   { name: 'cherries', quantity: 5 }
+// ];
+// // expected result: { name: 'cherries', quantity: 5 }
+// const result = inventory.find(item => item.name === 'cherries');
+
+// // Lab 5.18
+// const tasks = [
+//   { id: 1, name: 'Fishing' },
+//   { id: 2, name: 'Shopping' },
+//   { id: 3, name: 'Swimming' }
+// ];
+
+// const idx = tasks.findIndex(item => item.id === 2);
+
+// const tasks = [
+//   { id: 1, name: 'Fishing' },
+//   { id: 2, name: 'Shopping' },
+//   { id: 3, name: 'Swimming' }
+// ];
+
+// Lab 5.19
+// function updateTask(id, newName) {
+//   const idx = tasks.findIndex(item => item.id === id);
+//   if (idx !== -1) {
+//     tasks[idx].name = newName;
+//   }
+// }
+
+// updateTask(2, 'Travelling');
+// console.log(tasks);
+
+// Lab 5.20
+// function deleteTask(id) {
+//   const idx = tasks.findIndex(item => item.id === id);
+//   if (idx !== -1) {
+//     tasks.splice(idx, 1);
+//   }
+// }
+
+// deleteTask(1);
+// console.log(tasks);
